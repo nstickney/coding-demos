@@ -1,5 +1,5 @@
 """
-Visualize calculating pi with random numbers using the turtle
+Visualize calculating pi and tau with random numbers using the turtle
 """
 
 __author__ = "nstickney"
@@ -13,7 +13,7 @@ import turtle
 
 
 def calculate_pi(d, r, s, t, v):
-    """ Calculates pi with random numbers and draws a turtle visualization """
+    """ Calculates pi (and tau) using random numbers with turtle visuals """
     # random.seed("TOTALLY RANDOM")
     if v:
         t.shape("circle")
@@ -40,12 +40,14 @@ def calculate_pi(d, r, s, t, v):
             t.dot(r/75)
         if i % (d // 100) == 0:
             print(i, "dots:", " " * (max(len(str(d)), 4) - len(str(i))),
-                  "Pi =", hits / i * 4)
+                  'Pi = {:.7f}  Tau = {:.7f}'.format(hits / i * 4,
+                                                     hits / i * 8))
             if v:
                 t.color("black")
                 s.update()
 
-    print("Reference:", " " * (max(len(str(d)), 4) - 4), "Pi =", math.pi)
+    print("Reference:", " " * (max(len(str(d)), 4) - 4),
+          "Pi = {:.7f}  Tau = {:.7f}".format(math.pi, 2 * math.pi))
 
 
 def print_usage():
