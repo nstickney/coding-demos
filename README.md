@@ -19,6 +19,9 @@
 
 See each module here for individual usage guides.
 
+* [Pi](turtle-pi)
+* [Spirograph](https://github.com/nstickney/python-turtle-spirograph/)
+
 ## Contribute
 
 > Contributors to this project are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md "Code of Conduct").
